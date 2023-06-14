@@ -12,6 +12,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="weather app/src/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -23,11 +24,15 @@
                 <input
                   type="text"
                   placeholder="Enter a city"
-                  class="w-75 input-box"
+                  class="w-50 input-box"
                   id="myInput"
                 />
                 <button type="submit" class="btn mx-2 search" id="searchbtn">
                   Search
+                </button>
+
+                <button type="submit" class="btn mx-2 search" id="currentbtn">
+                  current
                 </button>
               </div>
             </form>
@@ -37,8 +42,8 @@
             >
               <div class="text">
                 <p>percipitation: 60%</p>
-                <p>Humidity: 78%</p>
-                <p>Wind: 10km/h</p>
+                <p>Humidity: <span id="humidity">78</span>% </p>
+                <p>Wind: <span id="wind">10</span>km/h</p>
               </div>
 
               <div class="text1">
@@ -46,10 +51,10 @@
               </div>
 
               <div class="text1">
-                <h1>Nigeria</h1>
+                <h1 id="name">Nigeria</h1>
                 <p id="date">Sat 20th May 2023</p>
-                <p id="degrees">☀ 21 <a href="">°C</a> | <a href="">°F</a></p>
-                <p>Clear</p>
+                <p id="degrees"> <span id="icon">☀</span> <span id="temp">21</span><a href="">°C</a> | <a href="">°F</a></p>
+                <p id="description">Clear</p>
               </div>
             </div>
 
